@@ -149,6 +149,44 @@ body {
 	background-image: url(./img/right.png);
 }
 
+.window .content .progressBar {
+	display: none;
+	margin: 20px auto;
+    width: 500px;
+    height: 8px;
+    background: #490000;
+    position: relative;
+}
+.window#start-3 .content .progressBar {
+	display: block;
+}
+.window .content .progressBar .progress {
+	position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: #5bd91d;
+}
+.window#start-3 .content .progressBar .progress {
+	animation: strtProgress3 30s forwards;
+}
+
+@keyframes strtProgress3 {
+	0% {
+		width: 0%;
+	}
+	50% {
+		background: red;
+	}
+	80% {
+		background: orange;
+	}
+	100% {
+		width: 99%;
+		background: limegreen;
+	}
+}
 
 @keyframes testAnime {
 	0% {
